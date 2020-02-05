@@ -38,14 +38,14 @@ it("changes CSS class when we click on it", () => {
     render(<Button></Button>, container);
   });
   const button = document.querySelector("[data-testid='button']");
-  expect(button.className).toBe(".untoggled");
+  expect(button.className).toBe("untoggled");
   
   act( () => {
     button.dispatchEvent(
       new MouseEvent("click", { bubbles: true })
     );
   });
-  expect(button.className).toBe(".toggled");
+  expect(button.className).toBe("toggled");
 });
 
 it("corresponds to what we saw before", () => {
